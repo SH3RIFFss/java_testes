@@ -1,5 +1,5 @@
 public class main {
-    public static void main(String[] args){
-        float num=22.40F;
+    public static void hello(String args[]){
+        System.out.println("Hello world !");
     }
 }
