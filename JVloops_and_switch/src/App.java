@@ -1,6 +1,6 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        int num = 0;
+        // int num = 0;
         String lang = "java";
         // WHILE
 
