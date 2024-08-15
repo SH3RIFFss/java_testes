@@ -1,7 +1,7 @@
 public class App {
     public static void main(String[] args) throws Exception {
         // int num = 0;
-        String lang = "java";
+        // String lang = "java";
         // WHILE
 
         // while (num < 15) {
@@ -40,6 +40,16 @@ public class App {
         // }
 
         //EXCEPTION TRY/CATCH
+
+        // try{
+            //bloco de codigo a ser monitorado
+        // }
+        // catch(EXCEÇAO1 obj){
+            // tratador de exceçao do tipo 1
+        // }
+        // finally{
+            //bloco a ser executado apos o bloco try independente do resultado de catch
+        // }
     }
 
 }
