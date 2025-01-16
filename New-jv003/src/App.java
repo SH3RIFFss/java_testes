@@ -1,9 +1,5 @@
 import javax.imageio.ImageIO;
 import javax.swing.*;
-
-import java.awt.BorderLayout;
-// import java.util.*;
-// import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 public class App {
@@ -16,12 +12,12 @@ public class App {
         JLabel label= new JLabel(icone);
         JLabel labeltxt=new JLabel("fala, fela !");
         JButton btn=new JButton("Clique Aqui");
-        btn.setSize(120, 30);
+        btn.setBounds(30,60,120, 30);
         janela.add(btn);
-        labeltxt.setSize(100,30);
+        labeltxt.setBounds(30,30,100,30);
         janela.add(labeltxt);
         janela.add(label);
-        janela.setSize(400,300);
+        janela.setBounds(300,300,400,300);
         janela.setVisible(true);
        } catch (Exception e) {
         System.out.println("Erro ao carregar imagem :"+e.getMessage());
