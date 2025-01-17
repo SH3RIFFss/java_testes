@@ -1,26 +1,38 @@
-import javax.imageio.ImageIO;
+import java.util.*;
 import javax.swing.*;
-import java.awt.image.BufferedImage;
-import java.io.File;
+
 public class App {
     public static void main(String[] args) throws Exception {
-       JFrame janela=new JFrame("janela com imagem");
-       janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-       try {
-        BufferedImage imagem=ImageIO.read (new File("src\\imagem\\stormtrooper.jpg"));
-        ImageIcon icone=new ImageIcon(imagem);
-        JLabel label= new JLabel(icone);
-        JLabel labeltxt=new JLabel("fala, fela !");
-        JButton btn=new JButton("Clique Aqui");
-        btn.setBounds(30,60,120, 30);
-        janela.add(btn);
-        labeltxt.setBounds(30,30,100,30);
-        janela.add(labeltxt);
-        janela.add(label);
-        janela.setBounds(300,300,400,300);
+        //definiçao da janela 
+        JFrame janela = new JFrame("calculadora");
+        // Definiçao dos campos de texto
+        JLabel titulo=new JLabel("Digite para somar");
+        titulo.setBounds(50,80,100,100);
+        janela.add(titulo);
+        JTextArea txt1=new JTextArea();
+        txt1.setBounds(50, 150, 30, 40);
+        janela.add(txt1);
+        JLabel lb1=new JLabel("+");
+        lb1.setBounds(90,150,30,40);
+        janela.add(lb1);
+        JTextArea txt2=new JTextArea();
+        txt2.setBounds(110,150,30,40);
+        janela.add(txt2);
+        JButton btnSoma=new JButton("=");
+        btnSoma.setBounds(160,150,50,40);
+        janela.add(btnSoma);
+        JLabel lbRes=new JLabel("0");
+        lbRes.setBounds(220,150,30,40);
+        janela.add(lbRes);
+        // Logica de funcionamento
+        int numb1=Integer.parseInt(txt1.getText());
+        int numb2=Integer.parseInt(txt2.getText());
+        int res=numb1+numb2;
+        lbRes.setText(Integer.toString(res));
+        // Adiçao dos itens para a janela
+        janela.setLayout(null);
+        janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        janela.setBounds(200, 100, 300, 400);
         janela.setVisible(true);
-       } catch (Exception e) {
-        System.out.println("Erro ao carregar imagem :"+e.getMessage());
-       }
     }
 }
