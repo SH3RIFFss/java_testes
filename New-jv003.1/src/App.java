@@ -7,9 +7,9 @@ import java.time.format.DateTimeFormatter;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        // D eclaraçao da janela
+        // Declaraçao da janela
         JFrame janela = new JFrame("Calcudor de idade");
-        // Decaraçao e implantadao dos itens na janela
+        // Declaraçao e implantaçao dos itens na janela
         JLabel tit = new JLabel("digite seu ano de nacimento !");
         tit.setBounds(50, 50, 200, 50);
         janela.add(tit);
@@ -25,7 +25,7 @@ public class App {
         JButton btnCalc = new JButton("Calcular");
         btnCalc.setBounds(150, 100, 80, 50);
         janela.add(btnCalc);
-        // Logida de funcionamento
+        // Logica de funcionamento
         LocalDateTime agr = LocalDateTime.now();
         DateTimeFormatter form = DateTimeFormatter.ofPattern("y");
         String dtfor = agr.format(form);

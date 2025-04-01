@@ -47,7 +47,6 @@ public class App {
 
         //INTERFACES E CLASSES ABSTRATAS
 
-
         carro carro1 = new carro("ford_GT-500"); //declaarçao do objeto com argumento
         carro carro2 = new carro("bmw_m5-competetion") ;
         carro1.acelerar();
