@@ -112,7 +112,7 @@ public class App {
         }
         //estruras co teste logico no final.
     }
-
+    Math.pow(2,2);
 }
 
 // logica do objeto nome em interaçao com array.
