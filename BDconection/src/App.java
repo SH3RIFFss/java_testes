@@ -6,9 +6,9 @@ public class App {
     public static void main(String[] args) throws Exception {
         
         Users u=new Users();
-        u.setName("eduardo ramos");
-        u.setEmail("eduram@gmail.com");
-        u.setPassw("kurir1");
+        u.setName("magno");
+        u.setEmail("bruxoMagno@gmail.com");
+        u.setPassw("BRux0007");
 
         new userDAO().loginUser(u);
     }
