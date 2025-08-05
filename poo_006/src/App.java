@@ -11,7 +11,6 @@ public class App {
        l[0].abrir();
        l[0].folhear(1000);
 
-
        l[0].detalhes();
     }
 }
