@@ -1,9 +1,9 @@
-public class Mamifero extends Animal{
-    private String corPelos;
-    public Mamifero(String especie,String pelos, int idade, double peso){
-        setClasse("mamifero");
+public class Reptil extends Animal {
+    private String corEscama;
+    public Reptil(String especie, String corEscama, int idade, double peso) {
+        setClasse("reptil");
         setEspecie(especie);
-        setCorPelos(pelos);
+        setCorEscama(corEscama);
         setIdade(idade);
         setPeso(peso);
         status();
@@ -18,20 +18,20 @@ public class Mamifero extends Animal{
     }
     @Override
     public void emitirSom(){
-        System.out.println(getEspecie()+"."+getCorPelos()+".sound");
+        System.out.println(getEspecie()+"."+getCorEscama()+".sound");
     }
     @Override
     public void alimentar(){
-        System.out.println("pode comer carne ou getais");
+        System.out.println("pode comer insetos ou pequenos animais");
     }
     @Override
     public void locomover(){
-        System.out.println("mamifero.locomover");
+        System.out.println(this.getClasse()+".locomover"); 
     }
-    public String getCorPelos() {
-        return corPelos;
+    public String getCorEscama(){
+        return corEscama;
     }
-    public void setCorPelos(String corPelos) {
-        this.corPelos = corPelos;
+    public void setCorEscama(String escama){
+        this.corEscama=escama;
     }
 }
