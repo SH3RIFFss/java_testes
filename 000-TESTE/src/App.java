@@ -17,8 +17,8 @@ public class App {
         System.out.println(minhaLista);
 
         // declaração dos valores de um array
-        int[] numeros = { 1, 2, 3, 4, 5 };
-        int[] numeros2 = { 1, 2, 3, 4, 6 };
+        int[] numeros = { 1, 2, 3, 4, 15 };
+        int[] numeros2 = { 1, 2, 3, 4, 5, 6 };
         System.out.println("==========");
         System.out.println("a soma dos numeros eh: " + somaArray(numeros)); // chamada e exibição do
         System.out.println("==========");// resultado da soma do aray
@@ -27,7 +27,7 @@ public class App {
                                                                                             // array
         System.out.println("================\no maior iten do array eh: " + maiorNumero(numeros)); // chamada e exibição
                                                                                                    // do resultado do
-                                                                                                   // mior item do array
+                                                                                                   // maior item do array
 
         /*
          * na função nativa (Math.max ou Math.min) recebe como parametro dois numeros
@@ -35,8 +35,8 @@ public class App {
          */
         int sla = Math.max(somaArray(numeros), somaArray(numeros2));
         int sla2 = Math.max(contaItemArray(numeros), contaItemArray(numeros2));
-        System.out.println(sla);
-        System.out.println(sla2);
+        System.out.println("o array com a maior quantidade de numeros altos contem : "+sla+", somando todos os indices");
+        System.out.println("o array com mais numeros contem : "+sla2+" itens");
 
         //declaração do arrray desordenado
         int[] miniNum = { 17,2 ,3,5,};
