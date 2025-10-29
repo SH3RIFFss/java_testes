@@ -10,13 +10,14 @@ public class Main {
     public static void main(String[] args) {
         String broker,topico,clientId,user,passw;
         try {
-            // broker="ws://maqiatto.com:8883";
-            broker="tcp://192.168.1.13:1883";
-            // topico="picadetitani1@gmail.com/topic001";
-            topico="topico/cntt";
+            // broker="tcp://192.168.1.14:1883"; //id de rede local
+            // topico="topico/001"; //topico local
+             
+            broker="ws://maqiatto.com:8883";
+            topico="picadetitani1@gmail.com/topic001";
+            user="picadetitani1@gmail.com";
+            passw="123456";
             clientId="jv_client";
-            // user="picadetitani1@gmail.com";
-            // passw="123456789";
             //criando o cliente 
             MqttClient client=new MqttClient(broker, clientId);
             System.out.println("conectando ao broker : "+broker);
@@ -45,8 +46,8 @@ public class Main {
             MqttConnectOptions options=new MqttConnectOptions();
             options.setCleanSession(true);
             //adicioando altenticação
-            // options.setUserName(user);
-            // options.setPassword(passw.toCharArray());
+            options.setUserName(user);
+            options.setPassword(passw.toCharArray());
             //conecta o cliente ao broker
             client.connect(options);
             System.out.println("conectado com sucesso !");
